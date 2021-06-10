@@ -40,7 +40,7 @@ The following rpc api have been implemented:
 
 ### example
 
-```c++
+```cpp
 //creat an HTTPS RPC Client instance
 auto client = cfx_cpp::NewHttpsRpcClient("https://test.confluxrpc.com");
 

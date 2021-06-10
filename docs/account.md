@@ -10,7 +10,7 @@ use **AccountManager** manage accounts at local machine.
 
 ### AccountManager Class
 
-```C++
+```cpp
 class AccountManager {
 public:
     /*
@@ -52,7 +52,7 @@ public:
 
 ### example
 
-```C++
+```cpp
 std::string keystoreDir = "C:/Keystores"; 
 std::string SecretKeyString = "9B9A28DD9D7E89B82FC1E95D9EEFDD3AB7258EF30A1CE3393F56BC555D4FA547";
 dev::Secret SecretKey(SecretKeyString);

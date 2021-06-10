@@ -4,7 +4,7 @@ To send a transaction, first you need to build a transaction and sign the transa
 
 In Conflux ,an transaction contains the following parts:
 
-```c++
+```cpp
 /*
 the base32 address of the receiver of the transaction, could be a personal account (e.g. CFXTEST:TYPE.USER:AARC9ABYCUE0HHZGYRR53M6CXEDGCCRMMY8M50BU1P) or a contract (e.g. CFXTEST:TYPE.CONTRACT:ACC7UAWF5UBTNMEZVHU9DHC6SGHEA0403YWJZ6WTPG). Leave a null here to deploy a contract.
 */
@@ -70,7 +70,7 @@ Signed transactions are [RLP](https://eth.wiki/en/fundamentals/rlp) encoded, and
 
 To get the final transmission data ,you need calc  **SHA3([ [nonce, gasPrice , gas , toAddress  ,  value , storageLimit  , epochHeight , chainI , data] ,v,r,s])** ; 
 
-```c++
+```cpp
 dev::Secret SecretKey("9B9A28DD9D7E89B82FC1E95D9EEFDD3AB7258EF30A1CE3393F56BC555D4FA547"); //private key
 cfx_cpp::Address to("cfxtest:aakd0d2x8zuu7zr3vfm3rwnjyv5rxxuvyj96acpdx8"); //toAddress
 dev::u256 value = cfx_cpp::CFX("1"); //value
@@ -87,7 +87,7 @@ std::string transHash = client->sendTransaction(trans); //send this transaction 
 
 If you just want to deploy a contract, invoke function `DeployContract` (using sample contract code :miniERC20 ):
 
-```c++
+```cpp
 auto constroctorParams = std::make_shared<ParamSet>();
 constroctorParams->addParam(std::make_shared<ParamString>("TigerCoin")); //create ERC20 toke(the name is---tiger-_-!)
 constroctorParams->addParam(std::make_shared<ParamUInt8>(18));

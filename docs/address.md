@@ -36,7 +36,7 @@ The two address formats (hex40 and base32) are convertible to each other. They a
 ### Address
 
  compatible with CIP-37 address and old address, internal automatic recognition of both formats address.
-```C++
+```cpp
 //CIP-37 address
 cfx_cpp::Address Addr("cfx:aard4f7m037evm7v4stang4xwg5ezeszga3rd40n8w");
 
@@ -46,7 +46,7 @@ cfx_cpp::Address Addr_hex_format("0x1a3d17aab67a48abb1d39e059b5391b64a91d530",cf
 
 ##### Instance method
 
-```C++
+```cpp
 bool isEqual = (Addr == Addr_hex_format); //Test whether the two addresses are the same in hex40 and base32
 
 //cfx:aard4f7m037evm7v4stang4xwg5ezeszga3rd40n8w		
@@ -96,7 +96,7 @@ contract_addr.GetAddressType().Type() ;//return contract
 
 When converting hex40 addresses to base32 addresses, networkId is required. The current networkId is the same with the chainId value, 1029 for the mainnet and 1 for the testnet.
 
-```C++
+```cpp
 class NetworkType {
 public:
     //constructor with string networktype( for example 'cfx','cfxtest','net10')
@@ -122,14 +122,14 @@ public:
 
 Address-type: For the null address (`0x0000000000000000000000000000000000000000`), address-type must be `"type.null"`. Otherwise,
 
-```C++
+```cpp
 match addr[0] & 0xf0
         case b00000000: "type.builtin"
         case b00010000: "type.user"
         case b10000000: "type.contract"
 ```
 
-```C++
+```cpp
 class AddressType {
 	public:
     	//constructor function with type string(null,builtin,usercontract)

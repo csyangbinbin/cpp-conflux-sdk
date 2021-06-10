@@ -16,7 +16,7 @@ First of all, CFX is used to pay transaction fees and to store collateral. Trans
 
 
 ## sdk function
-```C++
+```cpp
 /*
 Using typedef cpp_dec_float_50 hides the complexity of multiprecision to allow us to define variables with 50 decimal digit precision just like built-in double.
 */
@@ -46,7 +46,7 @@ dev::u256 operator"" _drip(const char* v);
 ```
 
 ## example
-```C++
+```cpp
 dev::u256 cfx_1 = CFX("1.23456789"); //build CFX with string 
 dev::u256 cfx_1s = 1.23456789_cfx; //build CFX with string literal
 
