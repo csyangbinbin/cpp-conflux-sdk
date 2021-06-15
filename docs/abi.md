@@ -4,17 +4,17 @@ The Contract Application Binary Interface (ABI) is the standard way to interact 
 
 ### Solidity - C++ Type Mapping
 
-|                Solidity Type                |                C++ Type                 |
-| :-----------------------------------------: | :-------------------------------------: |
-|                   address                   |              ParamAddress               |
-|         uint8 , uint16 .... uint256         | ParamUInt8 , ParamUInt16 , ParamUInt<N> |
-|           int8 , int16 ... int256           |  ParamInt8 , ParamInt16 , ParamInt<N>   |
-|                    bool                     |                ParamBool                |
-|                    bytes                    |             ParamByteArray              |
-|                  bytes<N>                   |            ParamByteArrayFix            |
-|                   string                    |               ParamString               |
-| Dynamic array of the same types, "<type>[]" |               ParamArray                |
-|  Fix array of the same types, "<type>[N]"   |              ParamArrayFix              |
+|                Solidity Type                |                C++ Type                |
+| :-----------------------------------------: | :------------------------------------: |
+|                   address                   |              ParamAddress              |
+|         uint8 , uint16 .... uint256         | ParamUInt8 , ParamUInt16 , ParamUInt-N |
+|           int8 , int16 ... int256           |  ParamInt8 , ParamInt16 , ParamInt-N   |
+|                    bool                     |               ParamBool                |
+|                    bytes                    |             ParamByteArray             |
+|                   bytes-N                   |           ParamByteArrayFix            |
+|                   string                    |              ParamString               |
+| Dynamic array of the same types, "<type>[]" |               ParamArray               |
+|  Fix array of the same types, "<type>[N]"   |             ParamArrayFix              |
 
 ###  Function Selector
 
@@ -50,7 +50,7 @@ public:
     // Return the 4-byte function signature
     Data getSignature() const;
 
-    //encode input parameters
+    // encode input parameters
     virtual void encode(Data& data) const;
     
     // Decode binary, fill output parameters
@@ -61,7 +61,7 @@ public:
 
 ```cpp
 /*
-	//A two dimensional array, an array of variable length of dynamic type
+	A two dimensional array, an array of variable length of dynamic type.
 	function : g(uint[][],string[]) 
 	input parameters : ([[1, 2], [3]], ["one", "two", "three"])
 */
@@ -69,7 +69,7 @@ auto func = TW::Ethereum::ABI::Function("g");
 std::shared_ptr<ParamArray> array1 = std::make_shared<ParamArray>(
 	std::vector<std::shared_ptr<ParamBase> >{
 	std::make_shared<ParamUInt256>(1),
-		std::make_shared<ParamUInt256>(2) });
+	std::make_shared<ParamUInt256>(2) });
 
 std::shared_ptr<ParamArray> array2 = std::make_shared<ParamArray>(
 	std::vector<std::shared_ptr<ParamBase> > {

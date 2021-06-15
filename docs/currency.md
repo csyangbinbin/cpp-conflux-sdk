@@ -70,5 +70,5 @@ bool equa6 = (cfx_flaot == gdrip_flaot);//true
 bool equa7 = (cfx_flaot == drip_flaot);//true
 
 std::cout << cfx_cpp::DecFloat50(cfx_flaot) << std::endl; //get Drip count
-std::cout << cfx_flaot << std::endl;C++
+std::cout << cfx_flaot << std::endl;
 ```
