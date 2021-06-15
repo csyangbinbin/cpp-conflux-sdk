@@ -62,7 +62,7 @@ dev::u256 stacking_balance = client->cfx_getStakingBalance(cfx_cpp::Address("cfx
 
 //cfx_getCollateralForStorage
 dev::u256 CollateralForStorage = client->cfx_getCollateralForStorage(cfx_cpp::Address("cfxtest:aard4f7m037evm7v4stang4xwg5ezeszgaxgumub42"));
-	std::cout << "CollateralForStorage:" << dev::toJS(CollateralForStorage) << std::endl;
+std::cout << "CollateralForStorage:" << dev::toJS(CollateralForStorage) << std::endl;
 	
 ```
 

@@ -60,7 +60,7 @@ dev::Secret SecretKey(SecretKeyString);
 //new an AccountManager instance
 cfx_cpp::AccountManager account(keystoreDir, cfx_cpp::NetworkType::NetworkTypeTestnetID);
 
-//impirt from private with passphrase
+//import from private with passphrase
 account.ImportPrivateKey(dev::Secret(SecretKeyString), "123456"); 
 
 //print account list
