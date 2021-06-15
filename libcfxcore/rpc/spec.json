@@ -1,0 +1,175 @@
+[
+  {
+    "name": "cfx_clientVersion",
+    "params": [],
+    "returns": ""
+  },
+  {
+    "name": "cfx_getTransactionByHash",
+    "params": [ "" ],
+    "returns": {}
+  },
+  {
+    "name": "cfx_getNextNonce",
+    "params": [ "", "" ],
+    "returns": ""
+  },
+  {
+    "name": "cfx_getStatus",
+    "params": [],
+    "returns": {}
+  },
+  {
+    "name": "cfx_epochNumber",
+    "params": [ "" ],
+    "returns": ""
+  },
+  {
+    "name": "cfx_gasPrice",
+    "params": [],
+    "returns": ""
+  },
+  {
+    "name": "cfx_estimateGasAndCollateral",
+    "params": [ {} ,""],
+    "returns": {}
+  },
+  {
+    "name": "cfx_sendRawTransaction",
+    "params": [""],
+    "returns":""
+  },
+  {
+    "name": "cfx_call",
+    "params": [ {} ,""],
+    "returns": ""
+  },
+  {
+    "name": "cfx_getTransactionReceipt",
+    "params": [""],
+    "returns": {}
+  }, 
+  {
+    "name": "cfx_getLogs",
+    "params": [{}],
+    "returns": []
+  }
+  , 
+  {
+    "name": "cfx_getBalance",
+    "params": ["",""],
+    "returns": ""
+  }
+  , 
+  {
+    "name": "cfx_getBlockByHash",
+    "params": ["",true],
+    "returns": {}
+  },
+  {
+    "name": "cfx_getBlockByEpochNumber",
+    "params": ["",true],
+    "returns": {}
+  },
+  {
+    "name": "cfx_getBestBlockHash",
+    "params": [],
+    "returns": ""
+  },
+  {
+    "name": "cfx_getBlocksByEpoch",
+    "params": [""],
+    "returns": []
+  },
+  {
+    "name": "cfx_getStakingBalance",
+    "params": ["",""],
+    "returns": ""
+  },
+  {
+    "name": "cfx_getCollateralForStorage",
+    "params": ["",""],
+    "returns": ""
+  },
+  {
+    "name": "cfx_getAdmin",
+    "params": ["",""],
+    "returns": ""
+  },
+  {
+    "name": "cfx_getCode",
+    "params": ["",""],
+    "returns": ""
+  },
+  {
+    "name": "cfx_getStorageAt",
+    "params": ["","",""],
+    "returns": ""
+  },
+  {
+    "name": "cfx_getStorageRoot",
+    "params": ["",""],
+    "returns": {}
+  }
+  ,
+  {
+    "name": "cfx_getSponsorInfo",
+    "params": ["",""],
+    "returns": {}
+  } ,
+  {
+    "name": "cfx_getAccount",
+    "params": ["",""],
+    "returns": {}
+  },
+  {
+    "name": "cfx_getInterestRate",
+    "params": [""],
+    "returns": ""
+  }
+  ,
+  {
+    "name": "cfx_getAccumulateInterestRate",
+    "params": [""],
+    "returns": ""
+  }
+  ,
+  {
+    "name": "cfx_checkBalanceAgainstTransaction",
+    "params": ["","","","","",""],
+    "returns": {}
+  },
+  {
+    "name": "cfx_getSkippedBlocksByEpoch",
+    "params": [""],
+    "returns": []
+  },
+  {
+    "name": "cfx_getConfirmationRiskByHash",
+    "params": [""],
+    "returns": ""
+  }
+  ,
+  {
+    "name": "cfx_getBlockRewardInfo",
+    "params": [""],
+    "returns": []
+  },
+  {
+    "name": "cfx_getBlockByHashWithPivotAssumption",
+    "params": ["","",""],
+    "returns": {}
+  },
+  {
+    "name": "cfx_getDepositList",
+    "params": ["",""],
+    "returns": []
+  },
+  {
+    "name": "cfx_getVoteList",
+    "params": ["",""],
+    "returns": []
+  }
+  
+  
+]

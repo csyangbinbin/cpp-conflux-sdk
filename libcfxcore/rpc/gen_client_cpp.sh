@@ -1,0 +1,1 @@
+jsonrpcstub spec.json --cpp-client=StubClient
