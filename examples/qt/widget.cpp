@@ -223,7 +223,8 @@ void Widget::onDeployFinished(int status, QString contractAddr) {
 void Widget::onBtnSendToken() {
 	QString recvAddr = ui->lineEdit_RecvTokenAddr->text();
 	int SendTokenCount = ui->lineEdit_SendTokenCount->text().toInt();
-
+	if (ui->lineEdit_ContractAddress->text().size() == 0)
+		return;
 	cfx_cpp::Address contractAddr(ui->lineEdit_ContractAddress->text().toStdString());
 	auto client = cfx_cpp::NewHttpsRpcClient("https://test.confluxrpc.com");
 	std::shared_ptr<cfx_cpp::Contract> deployedContract = std::make_shared<cfx_cpp::Contract>(client, contractAddr);
