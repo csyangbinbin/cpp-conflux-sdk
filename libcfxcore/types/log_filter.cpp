@@ -92,7 +92,7 @@ namespace cfx_cpp {
 
 		Json::Value topics_;
 		topics_.resize(4);
-		for (size_t i = 0; i < 4; i++) {
+		for (unsigned int i = 0; i < 4; i++) {
 			const dev::h256Hash& tp_set = topics[i];
 			Json::Value tp_set_;
 			if (!tp_set.empty()) {

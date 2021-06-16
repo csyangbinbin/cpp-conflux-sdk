@@ -74,7 +74,7 @@ namespace cfx_cpp
 
 		if (js.isMember("topics") && js["topics"].isArray()) {
 			auto const& tp_array = js["topics"];
-			for (size_t i = 0; i < tp_array.size(); i++) {
+			for (unsigned int i = 0; i < tp_array.size(); i++) {
 				topics.push_back(dev::jsToFixed<32>(tp_array[i].asString()));
 			}
 		}

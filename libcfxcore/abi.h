@@ -6,11 +6,11 @@
 
 #pragma once
 
-#include "ABI/ParamBase.h"
-#include "ABI/ParamNumber.h"
-#include "ABI/Parameters.h"
-#include "ABI/Array.h"
-#include "ABI/Bytes.h"
-#include "ABI/ParamAddress.h"
-#include "ABI/Function.h"
-#include "ABI/ParamFactory.h"
+#include "abi/ParamBase.h"
+#include "abi/ParamNumber.h"
+#include "abi/Parameters.h"
+#include "abi/Array.h"
+#include "abi/Bytes.h"
+#include "abi/ParamAddress.h"
+#include "abi/Function.h"
+#include "abi/ParamFactory.h"

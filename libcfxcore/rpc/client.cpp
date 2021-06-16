@@ -234,7 +234,7 @@ namespace cfx_cpp {
 		if (!retValue.isArray())
 			return entries;
 
-		for (size_t i = 0; i < retValue.size(); i++) {
+		for (unsigned int i = 0; i < retValue.size(); i++) {
 			LocalisedLogEntry entry;
 			bool  isok = LocalisedLogEntry::fromJson(retValue[i], entry);
 			if (isok)
@@ -443,7 +443,7 @@ namespace cfx_cpp {
 		Json::Value js = stub_clientPtr->cfx_getVoteList(account_address.GetVerboseBase32Address(), std::string(en));
 		std::vector<cfx_getVoteListResult> retValue;
 		if (js.isArray()) {
-			for (size_t i = 0; i < js.size(); i++) {
+			for (unsigned int i = 0; i < js.size(); i++) {
 				cfx_getVoteListResult vote;
 				jsMem2U256(js[i], "amount", vote.amount);
 				jsMem2U256(js[i], "unlockBlockNumber", vote.unlockBlockNumber);

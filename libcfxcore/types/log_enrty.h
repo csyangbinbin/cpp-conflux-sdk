@@ -15,9 +15,6 @@
 
 namespace cfx_cpp
 {
-	class dev::RLP;
-	class dev::RLPStream;
-
 	struct LogEntry
 	{
 		LogEntry() = default;

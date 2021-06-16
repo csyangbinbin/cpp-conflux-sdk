@@ -62,7 +62,7 @@ HttpClient::HttpClient(const std::string& url,const char* ssl_ca_file) :
 HttpClient::~HttpClient() { curl_easy_cleanup(curl); }
 
 void HttpClient::SendRPCMessage(const std::string &message,
-                                std::string &result) {
+                                std::string &result)  throw(JsonRpcException) {
 
   curl_easy_setopt(curl, CURLOPT_NOSIGNAL, 1);
   curl_easy_setopt(curl, CURLOPT_URL, this->url.c_str());

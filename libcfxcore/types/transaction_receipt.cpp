@@ -34,7 +34,7 @@ namespace cfx_cpp {
 		jsMem2U256(js, "storageCollateralized", retValue.storageCollateralized);
 		if (js.isMember("storageReleased") && js["storageReleased"].isArray()) {
 			auto const& storageReleasedArray = js["storageReleased"];
-			for (size_t i = 0; i < storageReleasedArray.size(); i++) {
+			for (unsigned int i = 0; i < storageReleasedArray.size(); i++) {
 				StorageChange change;
 				jsMem2CfxAddress(storageReleasedArray[i], "address", change.address);
 				jsMem2U256(storageReleasedArray[i], "collaterals", change.collaterals);
@@ -43,7 +43,7 @@ namespace cfx_cpp {
 		}
 		if (js.isMember("logs") && js["logs"].isArray()) {
 			auto const& logs = js["logs"];
-			for (size_t i = 0; i < logs.size(); i++) {
+			for (unsigned int i = 0; i < logs.size(); i++) {
 				auto const& log = logs[i];
 				cfx_cpp::Address  address;
 				dev::bytes data;

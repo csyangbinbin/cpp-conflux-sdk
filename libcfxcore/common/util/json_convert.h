@@ -11,6 +11,7 @@
 #include <libdevcore/CommonJS.h>
 #include "string_util.h"
 #include "common/encoding/hex.h"
+#include <libcfxcore/types/cfxaddress/address.h>
 
 namespace cfx_cpp {
 	inline bool jsHasStringValue(const Json::Value& js, const std::string& mem) {
