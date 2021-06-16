@@ -115,6 +115,7 @@ namespace cfx_cpp {
 		if (!secret)
 			return false;
 		ks->kill(iter->second);
+		cfxAddressDic.erase(addr);
 		return true;
 	}
 	cfx_cpp::Address AccountManager::GetDefault() const {

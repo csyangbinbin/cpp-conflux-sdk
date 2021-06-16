@@ -11,7 +11,7 @@ cable_configure_toolchain(DEFAULT cxx17-pic)
 set(CFX_CPP_CMAKE_DIR "${CMAKE_CURRENT_LIST_DIR}/cmake" CACHE PATH "The path to the cmake directory")
 list(APPEND CMAKE_MODULE_PATH ${CFX_CPP_CMAKE_DIR})
 
-set(HUNTER_CONFIGURATION_TYPES Release CACHE STRING "Hunter configuration types")
+set(HUNTER_CONFIGURATION_TYPES Debug CACHE STRING "Hunter configuration types")
 set(HUNTER_JOBS_NUMBER 4 CACHE STRING "Hunter jobs number")
 set(HUNTER_CACHE_SERVERS "https://github.com/ethereum/hunter-cache" CACHE STRING "Hunter cache servers")
 set(HUNTER_PASSWORDS_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake/Hunter/passwords.cmake CACHE STRING "Hunter password path")
@@ -26,6 +26,9 @@ cable_set_build_type(DEFAULT RelWithDebInfo CONFIGURATION_TYPES Debug;Release;Re
 
 project(cpp_conflux_sdk)
 set(PROJECT_VERSION 0.0.1)
+
+option(BUILD_EXAMPLES "Build  examples." ON)
+option(BUILD_TESTS "Build  tests." ON)
 
 set(Boost_USE_STATIC_LIBS ON)
 set(Boost_USE_MULTITHREADED ON)
@@ -67,4 +70,13 @@ include_directories(${UTILS_INCLUDE_DIR})
 add_subdirectory(libdevcore)
 add_subdirectory(libdevcrypto)
 add_subdirectory(libcfxcore)
-add_subdirectory(examples)
+
+if (BUILD_EXAMPLES)
+    add_subdirectory(examples)
+endif()
+
+if (BUILD_TESTS)
+    add_subdirectory(tests)
+endif()
+
+
