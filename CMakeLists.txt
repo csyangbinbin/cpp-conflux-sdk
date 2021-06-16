@@ -27,6 +27,9 @@ cable_set_build_type(DEFAULT RelWithDebInfo CONFIGURATION_TYPES Debug;Release;Re
 project(cpp_conflux_sdk)
 set(PROJECT_VERSION 0.0.1)
 
+option(BUILD_EXAMPLES "Build  examples." ON)
+option(BUILD_TESTS "Build  tests." ON)
+
 set(Boost_USE_STATIC_LIBS ON)
 set(Boost_USE_MULTITHREADED ON)
 #hunter_add_package(Boost COMPONENTS program_options filesystem system thread context fiber log)
@@ -67,4 +70,13 @@ include_directories(${UTILS_INCLUDE_DIR})
 add_subdirectory(libdevcore)
 add_subdirectory(libdevcrypto)
 add_subdirectory(libcfxcore)
-add_subdirectory(examples)
+
+if (BUILD_EXAMPLES)
+    add_subdirectory(examples)
+endif()
+
+if (BUILD_TESTS)
+    add_subdirectory(tests)
+endif()
+
+
