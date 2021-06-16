@@ -11,7 +11,7 @@ cable_configure_toolchain(DEFAULT cxx17-pic)
 set(CFX_CPP_CMAKE_DIR "${CMAKE_CURRENT_LIST_DIR}/cmake" CACHE PATH "The path to the cmake directory")
 list(APPEND CMAKE_MODULE_PATH ${CFX_CPP_CMAKE_DIR})
 
-set(HUNTER_CONFIGURATION_TYPES Debug CACHE STRING "Hunter configuration types")
+set(HUNTER_CONFIGURATION_TYPES Release CACHE STRING "Hunter configuration types")
 set(HUNTER_JOBS_NUMBER 4 CACHE STRING "Hunter jobs number")
 set(HUNTER_CACHE_SERVERS "https://github.com/ethereum/hunter-cache" CACHE STRING "Hunter cache servers")
 set(HUNTER_PASSWORDS_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake/Hunter/passwords.cmake CACHE STRING "Hunter password path")
