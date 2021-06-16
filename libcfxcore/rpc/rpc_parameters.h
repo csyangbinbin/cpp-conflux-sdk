@@ -12,8 +12,8 @@
 #include <libdevcore/FixedHash.h>
 #include <libdevcore/Common.h>
 #include <libdevcrypto/Common.h>
-#include "types/epoch_number.h"
-#include "types/cfxaddress/address.h"
+#include <libcfxcore/types/epoch_number.h>
+#include <libcfxcore/types/cfxaddress/address.h>
 #include <json/json.h>
 
 

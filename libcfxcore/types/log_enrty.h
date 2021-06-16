@@ -9,7 +9,7 @@
 #define __CPP_CONFLUX_SDK_LOG_ENTRY_TYPE_INCLUDE__
 
 #include <libdevcore/RLP.h>
-#include "bloom_filter.h"
+#include <libcfxcore/bloom_filter.h>
 #include "epoch_number.h"
 #include <json/json.h>
 

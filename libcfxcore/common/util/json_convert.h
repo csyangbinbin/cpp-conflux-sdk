@@ -10,7 +10,7 @@
 #include <json/json.h>
 #include <libdevcore/CommonJS.h>
 #include "string_util.h"
-#include "common/encoding/hex.h"
+#include <libcfxcore/common/encoding/hex.h>
 #include <libcfxcore/types/cfxaddress/address.h>
 
 namespace cfx_cpp {
