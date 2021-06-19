@@ -111,7 +111,7 @@ namespace cfx_cpp {
 		auto iter = cfxAddressDic.find(addr);
 		if (iter == cfxAddressDic.end())
 			return false;
-		dev::Secret secret(ks->secret(iter->second, [passphrase]() { return passphrase; }));
+		dev::Secret secret(ks->secret(iter->second, [passphrase]() { return passphrase; },false));
 		if (!secret)
 			return false;
 		ks->kill(iter->second);
